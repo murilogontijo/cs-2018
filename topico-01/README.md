@@ -1,0 +1,1 @@
+Quantidade total de exercícios realizados: 24
