@@ -11,6 +11,8 @@ Recursão
 Funções Crescentes
 Array
 Estrutura de Dados
+Strings
 Math
 Construtores
 Node.js
+Json
