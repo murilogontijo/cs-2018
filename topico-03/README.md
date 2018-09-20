@@ -1,5 +1,6 @@
 ##### Baseando no curso da Udacity - Fundamentos de JavaScript: https://br.udacity.com/course/intro-to-javascript--ud803
 
+ 1. tipos
  1. number
  1. strings
  1. booleans
@@ -14,3 +15,10 @@
  1. Switch
  1. Operador ternario 
  1. loops (For e While)
+ 1. Funções
+ 1. Parâmetros
+ 1. Argumentos
+ 1. Escopo global
+ 1. Escopo de função
+ 1. Hoisting 
+ 1. Expressão de função
