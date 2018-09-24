@@ -22,3 +22,12 @@
  1. Escopo de função
  1. Hoisting 
  1. Expressão de função
+ 1. Array
+ 1. Metodo length
+ 1. Metodo push
+ 1. Metodo pop
+ 1. Metodo splice
+ 1. Metodo sort
+ 1. Metodo reverse
+ 1. Metodo map
+ 1. Objetos
