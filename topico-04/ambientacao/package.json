@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/kyriosdata/js/issues"
   },
-  "homepage": "https://github.com/kyriosdata/js#readme"
+  "homepage": "https://github.com/kyriosdata/js#readme",
+  "devDependencies": {
+    "qunit": "^2.6.2"
+  }
 }
