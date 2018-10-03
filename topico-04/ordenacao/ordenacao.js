@@ -10,12 +10,14 @@ function ordena(entrada){
 		}
 	});
 	
-	
-	
-	
 	return ordenada.sort().join("");
 }
 
-console.log("Por favor, digite a frase/palavra a ser ordenada:\n");
-var texto = scanf('%S');
-console.log("\n"+ordena(texto));
+// console.log("Por favor, digite a frase/palavra a ser ordenada:\n");
+// var texto = scanf('%S');
+// console.log("\n"+ordena(texto));
+
+console.log(ordena("a vida e bela"));
+console.log(ordena("casa"));
+
+exports.ordena = ordena;
