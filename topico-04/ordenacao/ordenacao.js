@@ -1,16 +1,22 @@
-var scanf = require('scanf');
+var scanf = require("scanf");
 
-function ordena(entrada){
-	
-	var ordenada = entrada.split("");
-	
-	ordenada.forEach(function(caractere, index, array){
-		if(caractere === " "){
-			ordenada.splice(index, 1);
-		}
-	});
-	
-	return ordenada.sort().join("");
+/**
+ * Recebe uma palavra/texto que será ordenado.
+ * Ex.: Entrada= Frase "A vida e bela"; Saida= "aaabdeeilv"
+ * @author Murilo Gontijo
+ * @param {string} entrada - Texto ou Palavra a ser ordenado
+ * @returns {string} - Retorna a String ordenada sem "espaço"
+ */
+function ordena(entrada) {
+  var ordenada = entrada.split("");
+
+  ordenada.forEach((caractere, index) => {
+    if (caractere === " ") {
+      ordenada.splice(index, 1);
+    }
+  });
+
+  return ordenada.sort().join("");
 }
 
 // console.log("Por favor, digite a frase/palavra a ser ordenada:\n");
