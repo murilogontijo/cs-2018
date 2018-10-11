@@ -1,0 +1,34 @@
+{
+  "name": "modulos",
+  "version": "1.0.0",
+  "description": "Mais um exemplo de uso de import/export (ES6)",
+  "main": "main.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "g": "^2.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babelify": "^8.0.0"
+  },
+  "scripts": {
+    "test": "qunit test/tests.js",
+    "prepara-testes": "browserify test/testa-codigo.js -o test/tests.js -t [ babelify --presets [ env react ] ]",
+    "prepara-programa": "browserify programa.js -o programa-out.js -t [ babelify --presets [ env react ] ]",
+    "build": "babel *.js -d lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/murilogontijo/cs-2018.git"
+  },
+  "keywords": [
+    "módulos"
+  ],
+  "author": "Murilo Gontijo <murilo.gontijo@outlook.com>",
+  "license": "LGPL-3.0"
+}
