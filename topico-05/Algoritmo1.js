@@ -1,7 +1,5 @@
 function calculaPropriedade3025(numero) {
   if (numero >= 0 && numero <= 9999) {
-    console.log("cheguei aqui 1");
-
     aux1 = parseInt(numero / 100);
     aux2 = numero % 100;
     soma = aux1 + aux2;
