@@ -1,3 +1,10 @@
+/**
+ * Recebe um numero que será calculado.
+ * @author Murilo Gontijo
+ * @param {int} entrada - 2 numeros
+ * @returns {int} - Retorna o produto do numeros inteiros
+ */
+
 function produtoInteirosUsandoSomas(num1, num2) {
   if (num1 >= 0 && num2 >= 0) {
     totalParcelas = num1;
@@ -17,5 +24,3 @@ function produtoInteirosUsandoSomas(num1, num2) {
 }
 
 exports.produtoInteirosUsandoSomas = produtoInteirosUsandoSomas;
-console.log(produtoInteirosUsandoSomas(5, 2));
-console.log(produtoInteirosUsandoSomas(5, 6));

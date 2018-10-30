@@ -1,3 +1,9 @@
+/**
+ * Recebe um numero que será calculado.
+ * @author Murilo Gontijo
+ * @param {int} entrada - 2 numeros
+ * @returns {double} - Retorna o logaritmo
+ */
 function logaritmoNatural(n, k) {
   if (1 <= n && 2 <= k) {
     i = 2;

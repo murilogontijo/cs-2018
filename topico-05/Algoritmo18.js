@@ -1,5 +1,11 @@
 exports.horner = horner;
 
+/**
+ * Recebe um numero que será calculado.
+ * @author Murilo Gontijo
+ * @param {int} entrada - 2 numeros
+ * @returns {int} - Retorna o resulto do polinonimo de Horner
+ */
 function horner(x, g, a) {
   if (1 <= g) {
     p = a[g];

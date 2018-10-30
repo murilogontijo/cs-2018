@@ -1,5 +1,10 @@
 exports.fibonacci = fibonacci;
-
+/**
+ * Recebe um numero que será calculado.
+ * @author Murilo Gontijo
+ * @param {int} entrada - 1 numero
+ * @returns {int} - Retorna o valor do fibonacci
+ */
 function fibonacci(n) {
   if (0 <= n) {
     a = 0;

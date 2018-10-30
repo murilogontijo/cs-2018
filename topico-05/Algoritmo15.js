@@ -1,5 +1,10 @@
 exports.CrivoEratostenes = CrivoEratostenes;
-
+/**
+ * Recebe um numero que será calculado.
+ * @author Murilo Gontijo
+ * @param {int} entrada - 1 numero
+ * @returns {int} - Retorna o Crivo Erastostenes
+ */
 function CrivoEratostenes(n) {
   if (n > 1) {
     i = 2;

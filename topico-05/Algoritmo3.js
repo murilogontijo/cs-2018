@@ -1,3 +1,9 @@
+/**
+ * Recebe um numero que será calculado.
+ * @author Murilo Gontijo
+ * @param {int} entrada - 3 numeros ( dia, mes e ano)
+ * @returns {int} - Retorna o dia da Semana
+ */
 function diaDaSemana(dia, mes, ano) {
   if (dia >= 1 && dia <= 31 && mes >= 1 && mes <= 12 && ano > 1753) {
     if (mes === 1 || mes === 2) {

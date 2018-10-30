@@ -1,5 +1,11 @@
 exports.quadradoPerfeito = quadradoPerfeito;
 
+/**
+ * Recebe um numero que será calculado.
+ * @author Murilo Gontijo
+ * @param {int} entrada - 1 numero
+ * @returns {double} - Retorna o quadrado Perfeito
+ */
 function quadradoPerfeito(n) {
   if (1 <= n) {
     i = 1;

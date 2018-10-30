@@ -1,3 +1,9 @@
+/**
+ * Recebe um numero que será calculado.
+ * @author Murilo Gontijo
+ * @param {int} entrada - 1 numero
+ * @returns {int} - Retorna o valor do fatorial
+ */
 function fatorial(numero) {
   if (numero >= 1) {
     i = 2;

@@ -1,3 +1,9 @@
+/**
+ * Recebe um numero que será calculado.
+ * @author Murilo Gontijo
+ * @param {int} entrada - 1 numero
+ * @returns {int} - Retorna o somatorio dos primeiros numeros naturais
+ */
 function somaDosPrimeirosNaturais(numero) {
   if (numero >= 1) {
     i = 2;

@@ -1,3 +1,9 @@
+/**
+ * Recebe um numero que será calculado.
+ * @author Murilo Gontijo
+ * @param {int} entrada - 2 numeros
+ * @returns {int} - Retorna a raiz quadrada
+ */
 function raiz(n, i) {
   if (0 < n) {
     r = 1;

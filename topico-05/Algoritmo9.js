@@ -1,3 +1,9 @@
+/**
+ * Recebe um numero que será calculado.
+ * @author Murilo Gontijo
+ * @param {int} entrada - 1 numero
+ * @returns {double} - Retorna o PI
+ */
 function valorPi(numero) {
   if (numero >= 1) {
     i = 1;

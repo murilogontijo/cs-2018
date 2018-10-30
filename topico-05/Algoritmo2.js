@@ -1,3 +1,9 @@
+/**
+ * Recebe um numero que será calculado.
+ * @author Murilo Gontijo
+ * @param {int} entrada - numero
+ * @returns {boolean} - Retorna se é verdadeiro ou false
+ */
 function calculaPropriedade153(numero) {
   if (numero >= 0 && numero <= 9999) {
     c = parseInt(numero / 100);

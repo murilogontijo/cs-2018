@@ -1,3 +1,9 @@
+/**
+ * Recebe um numero que será calculado.
+ * @author Murilo Gontijo
+ * @param {int} entrada - 2 numeros
+ * @returns {string} - Retorna a potecia
+ */
 function potenciaUsandoSomas(x, y) {
   if (0 <= x && 0 <= y) {
     potencia = 1;

@@ -1,3 +1,9 @@
+/**
+ * Recebe um numero que será calculado.
+ * @author Murilo Gontijo
+ * @param {int} entrada - 3 numeros
+ * @returns {double} - Retorna a razao Aurea
+ */
 function razaoAurea(x, y, k) {
   if (0 <= x && x < y && 0 < k && k === x + y) {
     c = y;
