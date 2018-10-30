@@ -14,6 +14,65 @@ function calculaPropriedade3025(numero) {
 exports.calculaPropriedade3025 = calculaPropriedade3025;
 
 },{}],2:[function(require,module,exports){
+function logaritmoNatural(n, k) {
+  if (1 <= n && 2 <= k) {
+    i = 2;
+    e = 1 + n;
+    numerador = n;
+    denominador = 1;
+
+    while (i <= k) {
+      numerador = numerador * numerador;
+      denominador = denominador * i;
+      e = e + numerador / denominador;
+      i = i + 1;
+    }
+    return e;
+  } else return "Numeros não correspondem";
+}
+
+console.log(logaritmoNatural(3, 2));
+
+exports.logaritmoNatural = logaritmoNatural;
+
+},{}],3:[function(require,module,exports){
+function razaoAurea(x, y, k) {
+  if (0 <= x && x < y && 0 < k && k === x + y) {
+    c = y;
+    a = x;
+    i = 1;
+    while (i <= k) {
+      t = c;
+      c = c + a;
+      a = t;
+      i = i + 1;
+    }
+    return c / a;
+  } else return "Numeros não correspondem";
+}
+
+console.log(razaoAurea(1, 2, 3));
+
+exports.razaoAurea = razaoAurea;
+
+},{}],4:[function(require,module,exports){
+exports.quadradoPerfeito = quadradoPerfeito;
+
+function quadradoPerfeito(n) {
+  if (1 <= n) {
+    i = 1;
+    s = 1;
+    while (s < n) {
+      i = i + 2;
+      s = s + 1;
+    }
+    return (s = n);
+  } else return "Numeros não correspondem";
+}
+
+console.log(quadradoPerfeito(0));
+
+},{}],5:[function(require,module,exports){
 function calculaPropriedade153(numero) {
   if (numero >= 0 && numero <= 9999) {
     c = parseInt(numero / 100);
@@ -31,7 +90,7 @@ exports.calculaPropriedade153 = calculaPropriedade153;
 
 console.log(calculaPropriedade153(153));
 
-},{}],3:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 function diaDaSemana(dia, mes, ano) {
   if (dia >= 1 && dia <= 31 && mes >= 1 && mes <= 12 && ano > 1753) {
     if (mes === 1 || mes === 2) {
@@ -50,7 +109,7 @@ console.log(diaDaSemana(22, 10, 2018));
 
 exports.diaDaSemana = diaDaSemana;
 
-},{}],4:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 function restoDivisao(x, y) {
   if (y >= 0 && x > 0) {
     resto = x;
@@ -62,7 +121,7 @@ function restoDivisao(x, y) {
 }
 exports.restoDivisao = restoDivisao;
 
-},{}],5:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 function somaDosPrimeirosNaturais(numero) {
   if (numero >= 1) {
     i = 2;
@@ -77,7 +136,7 @@ function somaDosPrimeirosNaturais(numero) {
 }
 exports.somaDosPrimeirosNaturais = somaDosPrimeirosNaturais;
 
-},{}],6:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 function fatorial(numero) {
   if (numero >= 1) {
     i = 2;
@@ -94,7 +153,7 @@ exports.fatorial = fatorial;
 
 console.log(fatorial(10));
 
-},{}],7:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 function produtoInteirosUsandoSomas(num1, num2) {
   if (num1 >= 0 && num2 >= 0) {
     totalParcelas = num1;
@@ -117,7 +176,7 @@ exports.produtoInteirosUsandoSomas = produtoInteirosUsandoSomas;
 console.log(produtoInteirosUsandoSomas(5, 2));
 console.log(produtoInteirosUsandoSomas(5, 6));
 
-},{}],8:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 function potenciaUsandoSomas(x, y) {
   if (0 <= x && 0 <= y) {
     potencia = 1;
@@ -133,7 +192,27 @@ function potenciaUsandoSomas(x, y) {
 
 exports.potenciaUsandoSomas = potenciaUsandoSomas;
 
-},{}],9:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
+function valorPi(numero) {
+  if (numero >= 1) {
+    i = 1;
+    s = -1;
+    d = -1;
+    p = 0;
+
+    while (i <= numero) {
+      d = d + 2;
+      s = -1 * s;
+      p = p + (4 * s) / d;
+      i = i + 1;
+    }
+    return p.toFixed(2);
+  }
+}
+
+exports.valorPi = valorPi;
+
+},{}],13:[function(require,module,exports){
 // import("../Algoritmo1");
 // import("../Algoritmo2");
 // import("../Algoritmo3");
@@ -149,6 +228,10 @@ const somaDosPrimeirosNaturais = require("../Algoritmo5");
 const fatorial = require("../Algoritmo6");
 const produtoInteirosUsandoSomas = require("../Algoritmo7");
 const potenciaUsandoSomas = require("../Algoritmo8");
+const valorPi = require("../Algoritmo9");
+const logaritmoNatural = require("../Algoritmo10");
+const razaoAurea = require("../Algoritmo11");
+const quadradoPerfeito = require("../Algoritmo12");
 
 QUnit.test("Algoritmo1 - Verifica a propriedade do numero 3025", function(
   assert
@@ -265,4 +348,62 @@ QUnit.test("Algoritmo8 - A potencia de 3 elevado 2 utilizando soma", function(
   assert.equal(resultado, 9, "Teste correto - O valor eh igual a 9");
 });
 
-},{"../Algoritmo1":1,"../Algoritmo2":2,"../Algoritmo3":3,"../Algoritmo4":4,"../Algoritmo5":5,"../Algoritmo6":6,"../Algoritmo7":7,"../Algoritmo8":8}]},{},[9]);
+QUnit.test("Algoritmo9 - O valor de PI", function(assert) {
+  let resultado = valorPi.valorPi(3);
+
+  assert.equal(resultado, 3.47, "Teste correto - O valor eh igual a 3.47");
+});
+
+QUnit.test("Algoritmo10 - O valor do Logaritmo Natural", function(assert) {
+  let resultado = logaritmoNatural.logaritmoNatural(3, 2);
+
+  assert.equal(resultado, 8.5, "Teste correto - O valor eh igual a 8.5");
+});
+
+QUnit.test("Algoritmo10 - O valor do Logaritmo Natural", function(assert) {
+  let resultado = logaritmoNatural.logaritmoNatural(3, 0);
+
+  assert.equal(
+    resultado,
+    "Numeros não correspondem",
+    "Teste correto - Não executa o calculo pois foi informado algum valor incorreto"
+  );
+});
+
+QUnit.test("Algoritmo11 - O valor da Razao Aurea", function(assert) {
+  let resultado = razaoAurea.razaoAurea(1, 2, 3);
+
+  assert.equal(resultado, 1.6, "Teste correto - O valor eh igual a 1.6");
+});
+
+QUnit.test("Algoritmo11 - O valor da Razao Aurea", function(assert) {
+  let resultado = razaoAurea.razaoAurea(1, 2, 5);
+
+  assert.equal(
+    resultado,
+    "Numeros não correspondem",
+    "Teste correto - Não executa o calculo pois foi informado algum valor incorreto"
+  );
+});
+
+QUnit.test("Algoritmo12 - O valor do Quadrado Perfeito", function(assert) {
+  let resultado = quadradoPerfeito.quadradoPerfeito(5);
+
+  assert.equal(
+    resultado,
+    5,
+    "Teste correto - O valor eh igual a 5. É verdadeiro"
+  );
+});
+
+QUnit.test("Algoritmo12 - O valor da Razao Aurea", function(assert) {
+  let resultado = quadradoPerfeito.quadradoPerfeito(0);
+
+  assert.equal(
+    resultado,
+    "Numeros não correspondem",
+    "Teste correto - Não executa o calculo pois foi informado algum valor incorreto"
+  );
+});
+
+},{"../Algoritmo1":1,"../Algoritmo10":2,"../Algoritmo11":3,"../Algoritmo12":4,"../Algoritmo2":5,"../Algoritmo3":6,"../Algoritmo4":7,"../Algoritmo5":8,"../Algoritmo6":9,"../Algoritmo7":10,"../Algoritmo8":11,"../Algoritmo9":12}]},{},[13]);

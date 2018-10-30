@@ -11,10 +11,8 @@ function valorPi(numero) {
       p = p + (4 * s) / d;
       i = i + 1;
     }
-    return p;
+    return p.toFixed(2);
   }
 }
 
 exports.valorPi = valorPi;
-
-console.log(valorPi(2));

@@ -1,9 +1,7 @@
 const valorPi = require("../Algoritmo9");
 
-QUnit.test("Algoritmo8 - A potencia de 3 elevado 2 utilizando soma", function(
-  assert
-) {
+QUnit.test("Algoritmo9 - O valor de PI", function(assert) {
   let resultado = valorPi.valorPi(3);
 
-  assert.equal(resultado, 9, "Teste correto - O valor eh igual a 9");
+  assert.equal(resultado, 3.47, "Teste correto - O valor eh igual a 3.47");
 });
