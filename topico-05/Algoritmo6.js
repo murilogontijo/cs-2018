@@ -1,3 +1,4 @@
+var scanf = require("scanf");
 /**
  * Recebe um numero que será calculado.
  * @author Murilo Gontijo
@@ -5,6 +6,8 @@
  * @returns {int} - Retorna o valor do fatorial
  */
 function fatorial(numero) {
+  console.log("Digite o numero desejado: ");
+  var numero = scanf("%d");
   if (numero >= 1) {
     i = 2;
     f = 1;
@@ -17,5 +20,3 @@ function fatorial(numero) {
 }
 
 exports.fatorial = fatorial;
-
-console.log(fatorial(10));

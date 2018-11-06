@@ -3,7 +3,7 @@ exports.horner = horner;
 /**
  * Recebe um numero que será calculado.
  * @author Murilo Gontijo
- * @param {int} entrada - 2 numeros
+ * @param {int} entrada - 3 numeros
  * @returns {int} - Retorna o resulto do polinonimo de Horner
  */
 function horner(x, g, a) {
@@ -17,4 +17,4 @@ function horner(x, g, a) {
     return p;
   } else return "Numeros não correspondem";
 }
-console.log(horner(10, 2, 3));
+console.log(horner(10, 60, 3));

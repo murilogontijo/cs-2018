@@ -1,4 +1,10 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+/**
+ * Recebe um numero que será calculado.
+ * @author Murilo Gontijo
+ * @param {int} entrada - numero
+ * @returns {boolean} - Retorna se é verdadeiro ou false
+ */
 function calculaPropriedade3025(numero) {
   if (numero >= 0 && numero <= 9999) {
     aux1 = parseInt(numero / 100);
@@ -14,6 +20,12 @@ function calculaPropriedade3025(numero) {
 exports.calculaPropriedade3025 = calculaPropriedade3025;
 
 },{}],2:[function(require,module,exports){
+/**
+ * Recebe um numero que será calculado.
+ * @author Murilo Gontijo
+ * @param {int} entrada - 2 numeros
+ * @returns {double} - Retorna o logaritmo
+ */
 function logaritmoNatural(n, k) {
   if (1 <= n && 2 <= k) {
     i = 2;
@@ -36,6 +48,12 @@ console.log(logaritmoNatural(3, 2));
 exports.logaritmoNatural = logaritmoNatural;
 
 },{}],3:[function(require,module,exports){
+/**
+ * Recebe um numero que será calculado.
+ * @author Murilo Gontijo
+ * @param {int} entrada - 3 numeros
+ * @returns {double} - Retorna a razao Aurea
+ */
 function razaoAurea(x, y, k) {
   if (0 <= x && x < y && 0 < k && k === x + y) {
     c = y;
@@ -58,6 +76,12 @@ exports.razaoAurea = razaoAurea;
 },{}],4:[function(require,module,exports){
 exports.quadradoPerfeito = quadradoPerfeito;
 
+/**
+ * Recebe um numero que será calculado.
+ * @author Murilo Gontijo
+ * @param {int} entrada - 1 numero
+ * @returns {double} - Retorna o quadrado Perfeito
+ */
 function quadradoPerfeito(n) {
   if (1 <= n) {
     i = 1;
@@ -73,6 +97,121 @@ function quadradoPerfeito(n) {
 console.log(quadradoPerfeito(0));
 
 },{}],5:[function(require,module,exports){
+/**
+ * Recebe um numero que será calculado.
+ * @author Murilo Gontijo
+ * @param {int} entrada - 2 numeros
+ * @returns {int} - Retorna a raiz quadrada
+ */
+function raiz(n, i) {
+  if (0 < n) {
+    r = 1;
+    while (0 <= i) {
+      r = (r + n / r) / 2;
+      i = i - 1;
+    }
+    return r;
+  } else return "Numeros não correspondem";
+}
+exports.raiz = raiz;
+
+},{}],6:[function(require,module,exports){
+exports.primo = primo;
+
+/**
+ * Recebe um numero que será calculado.
+ * @author Murilo Gontijo
+ * @param {int} entrada - 1 numero
+ * @returns {int} - Retorna verdadeiro ou false se o numero eh primo
+ */
+function primo(n) {
+  if (n > 1) {
+    i = 2;
+    while (i < n) {
+      if (n % i === 0) {
+        return false;
+      }
+      i = i + 1;
+      return true;
+    }
+  } else return "Numeros não correspondem";
+}
+
+console.log(primo(4));
+
+},{}],7:[function(require,module,exports){
+exports.mdc = mdc;
+
+/**
+ * Recebe um numero que será calculado.
+ * @author Murilo Gontijo
+ * @param {int} entrada - 2 numeros
+ * @returns {int} - Retorna o mdc
+ */
+function mdc(a, b) {
+  if (b <= a && 0 < b) {
+    while (b !== 0) {
+      m = a % b;
+      a = b;
+      b = m;
+    }
+    return a;
+  } else return "Numeros não correspondem";
+}
+
+},{}],8:[function(require,module,exports){
+exports.mdc2 = mdc2;
+
+/**
+ * Recebe um numero que será calculado.
+ * @author Murilo Gontijo
+ * @param {int} entrada - 2 numeros
+ * @returns {int} - Retorna o mdc
+ */
+function mdc2(a, b) {
+  if ((b <= a, 0 < b)) {
+    while (a != b) {
+      if (a > b) {
+        a = a - b;
+      } else {
+        b = b - a;
+      }
+    }
+    return a;
+  } else return "Numeros não correspondem";
+}
+
+console.log(mdc2(81, 54));
+
+},{}],9:[function(require,module,exports){
+exports.horner = horner;
+
+/**
+ * Recebe um numero que será calculado.
+ * @author Murilo Gontijo
+ * @param {int} entrada - 3 numeros
+ * @returns {int} - Retorna o resulto do polinonimo de Horner
+ */
+function horner(x, g, a) {
+  if (1 <= g) {
+    p = a[g];
+    i = g - 1;
+    while (0 <= i) {
+      p = p * x + a[i];
+      i = i - 1;
+    }
+    return p;
+  } else return "Numeros não correspondem";
+}
+console.log(horner(10, 60, 3));
+
+},{}],10:[function(require,module,exports){
+/**
+ * Recebe um numero que será calculado.
+ * @author Murilo Gontijo
+ * @param {int} entrada - numero
+ * @returns {boolean} - Retorna se é verdadeiro ou false
+ */
 function calculaPropriedade153(numero) {
   if (numero >= 0 && numero <= 9999) {
     c = parseInt(numero / 100);
@@ -90,7 +229,13 @@ exports.calculaPropriedade153 = calculaPropriedade153;
 
 console.log(calculaPropriedade153(153));
 
-},{}],6:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
+/**
+ * Recebe um numero que será calculado.
+ * @author Murilo Gontijo
+ * @param {int} entrada - 3 numeros ( dia, mes e ano)
+ * @returns {int} - Retorna o dia da Semana
+ */
 function diaDaSemana(dia, mes, ano) {
   if (dia >= 1 && dia <= 31 && mes >= 1 && mes <= 12 && ano > 1753) {
     if (mes === 1 || mes === 2) {
@@ -109,7 +254,14 @@ console.log(diaDaSemana(22, 10, 2018));
 
 exports.diaDaSemana = diaDaSemana;
 
-},{}],7:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
+/**
+ * Recebe um numero que será calculado.
+ * @author Murilo Gontijo
+ * @param {int} entrada - 2 numeros
+ * @returns {int} - Retorna o resto da divisao
+ */
+
 function restoDivisao(x, y) {
   if (y >= 0 && x > 0) {
     resto = x;
@@ -121,7 +273,13 @@ function restoDivisao(x, y) {
 }
 exports.restoDivisao = restoDivisao;
 
-},{}],8:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
+/**
+ * Recebe um numero que será calculado.
+ * @author Murilo Gontijo
+ * @param {int} entrada - 1 numero
+ * @returns {int} - Retorna o somatorio dos primeiros numeros naturais
+ */
 function somaDosPrimeirosNaturais(numero) {
   if (numero >= 1) {
     i = 2;
@@ -136,7 +294,13 @@ function somaDosPrimeirosNaturais(numero) {
 }
 exports.somaDosPrimeirosNaturais = somaDosPrimeirosNaturais;
 
-},{}],9:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
+/**
+ * Recebe um numero que será calculado.
+ * @author Murilo Gontijo
+ * @param {int} entrada - 1 numero
+ * @returns {int} - Retorna o valor do fatorial
+ */
 function fatorial(numero) {
   if (numero >= 1) {
     i = 2;
@@ -153,7 +317,14 @@ exports.fatorial = fatorial;
 
 console.log(fatorial(10));
 
-},{}],10:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
+/**
+ * Recebe um numero que será calculado.
+ * @author Murilo Gontijo
+ * @param {int} entrada - 2 numeros
+ * @returns {int} - Retorna o produto do numeros inteiros
+ */
+
 function produtoInteirosUsandoSomas(num1, num2) {
   if (num1 >= 0 && num2 >= 0) {
     totalParcelas = num1;
@@ -173,10 +344,14 @@ function produtoInteirosUsandoSomas(num1, num2) {
 }
 
 exports.produtoInteirosUsandoSomas = produtoInteirosUsandoSomas;
-console.log(produtoInteirosUsandoSomas(5, 2));
-console.log(produtoInteirosUsandoSomas(5, 6));
 
-},{}],11:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
+/**
+ * Recebe um numero que será calculado.
+ * @author Murilo Gontijo
+ * @param {int} entrada - 2 numeros
+ * @returns {string} - Retorna a potecia
+ */
 function potenciaUsandoSomas(x, y) {
   if (0 <= x && 0 <= y) {
     potencia = 1;
@@ -192,7 +367,13 @@ function potenciaUsandoSomas(x, y) {
 
 exports.potenciaUsandoSomas = potenciaUsandoSomas;
 
-},{}],12:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
+/**
+ * Recebe um numero que será calculado.
+ * @author Murilo Gontijo
+ * @param {int} entrada - 1 numero
+ * @returns {double} - Retorna o PI
+ */
 function valorPi(numero) {
   if (numero >= 1) {
     i = 1;
@@ -212,7 +393,7 @@ function valorPi(numero) {
 
 exports.valorPi = valorPi;
 
-},{}],13:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 // import("../Algoritmo1");
 // import("../Algoritmo2");
 // import("../Algoritmo3");
@@ -232,6 +413,12 @@ const valorPi = require("../Algoritmo9");
 const logaritmoNatural = require("../Algoritmo10");
 const razaoAurea = require("../Algoritmo11");
 const quadradoPerfeito = require("../Algoritmo12");
+const raiz = require("../Algoritmo13");
+const primo = require("../Algoritmo14");
+const mdc = require("../Algoritmo16");
+const mdc2 = require("../Algoritmo17");
+const fibonacci = require("../Algoritmo18");
+// const fibonacci2 = require("../Algoritmo19");
 
 QUnit.test("Algoritmo1 - Verifica a propriedade do numero 3025", function(
   assert
@@ -406,4 +593,96 @@ QUnit.test("Algoritmo12 - O valor da Razao Aurea", function(assert) {
   );
 });
 
-},{"../Algoritmo1":1,"../Algoritmo10":2,"../Algoritmo11":3,"../Algoritmo12":4,"../Algoritmo2":5,"../Algoritmo3":6,"../Algoritmo4":7,"../Algoritmo5":8,"../Algoritmo6":9,"../Algoritmo7":10,"../Algoritmo8":11,"../Algoritmo9":12}]},{},[13]);
+QUnit.test("Algoritmo13 - O valor da Raiz Quadrada", function(assert) {
+  let resultado = raiz.raiz(9, 100);
+
+  assert.equal(resultado, 3, "Teste correto - O valor eh igual a 3");
+});
+
+QUnit.test("Algoritmo13 - O valor da Raiz Quadrada", function(assert) {
+  let resultado = raiz.raiz(4, 100);
+
+  assert.equal(resultado, 2, "Teste correto - O valor eh igual a 2");
+});
+
+QUnit.test("Algoritmo13 - O valor do Quadrado Perfeito", function(assert) {
+  let resultado = raiz.raiz(0);
+
+  assert.equal(
+    resultado,
+    "Numeros não correspondem",
+    "Teste correto - Não executa o calculo pois foi informado algum valor incorreto"
+  );
+});
+
+QUnit.test("Algoritmo14 - Numero primo", function(assert) {
+  let resultado = primo.primo(3);
+
+  assert.equal(resultado, true, "Teste correto - O numero eh primo");
+});
+
+QUnit.test("Algoritmo14 - Numero primo", function(assert) {
+  let resultado = primo.primo(4);
+
+  assert.equal(resultado, false, "Teste correto - O nao numero eh primo");
+});
+
+QUnit.test("Algoritmo14 - Numero primo", function(assert) {
+  let resultado = primo.primo(1);
+
+  assert.equal(
+    resultado,
+    "Numeros não correspondem",
+    "Teste correto - Não executa o calculo pois foi informado algum valor incorreto"
+  );
+});
+
+QUnit.test("Algoritmo16 - O valor do MDC", function(assert) {
+  let resultado = mdc.mdc(81, 54);
+
+  assert.equal(resultado, 27, "Teste correto - O valor eh igual a 27");
+});
+
+QUnit.test("Algoritmo16 - O valor do MDC", function(assert) {
+  let resultado = mdc.mdc(5, 0);
+
+  assert.equal(
+    resultado,
+    "Numeros não correspondem",
+    "Teste correto - Não executa o calculo pois foi informado algum valor incorreto"
+  );
+});
+
+QUnit.test("Algoritmo17 - O valor do MDC2", function(assert) {
+  let resultado = mdc2.mdc2(81, 54);
+
+  assert.equal(resultado, 27, "Teste correto - O valor eh igual a 27");
+});
+
+QUnit.test("Algoritmo17 - O valor do MDC2", function(assert) {
+  let resultado = mdc2.mdc2(5, 0);
+
+  assert.equal(
+    resultado,
+    "Numeros não correspondem",
+    "Teste correto - Não executa o calculo pois foi informado algum valor incorreto"
+  );
+});
+
+QUnit.test("Algoritmo18 - O valor de fibonacci", function(assert) {
+  let resultado = fibonacci.fibonacci(10);
+
+  assert.equal(resultado, 55, "Teste correto - O valor eh igual a 55");
+});
+
+QUnit.test("Algoritmo18 - O valor de fibonacci", function(assert) {
+  let resultado = fibonacci.fibonacci(-1);
+
+  assert.equal(
+    resultado,
+    "Numeros não correspondem",
+    "Teste correto - Não executa o calculo pois foi informado algum valor incorreto"
+  );
+});
+
+},{"../Algoritmo1":1,"../Algoritmo10":2,"../Algoritmo11":3,"../Algoritmo12":4,"../Algoritmo13":5,"../Algoritmo14":6,"../Algoritmo16":7,"../Algoritmo17":8,"../Algoritmo18":9,"../Algoritmo2":10,"../Algoritmo3":11,"../Algoritmo4":12,"../Algoritmo5":13,"../Algoritmo6":14,"../Algoritmo7":15,"../Algoritmo8":16,"../Algoritmo9":17}]},{},[18]);

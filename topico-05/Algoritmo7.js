@@ -1,3 +1,6 @@
+var scanf = require("scanf");
+exports.produtoInteirosUsandoSomas = produtoInteirosUsandoSomas;
+
 /**
  * Recebe um numero que será calculado.
  * @author Murilo Gontijo
@@ -6,6 +9,10 @@
  */
 
 function produtoInteirosUsandoSomas(num1, num2) {
+  console.log("Digite o primeiro numero: ");
+  var num1 = scanf("%d");
+  console.log("Digite o segundo numero: ");
+  var num2 = scanf("%d");
   if (num1 >= 0 && num2 >= 0) {
     totalParcelas = num1;
     parcela = num2;
@@ -14,13 +21,11 @@ function produtoInteirosUsandoSomas(num1, num2) {
       parcela = num1;
     }
     i = 1;
-    s = 0;
+    soma = 0;
     while (i <= totalParcelas) {
-      s = s + parcela;
+      soma = soma + parcela;
       i = i + 1;
     }
-    return s;
+    return soma;
   }
 }
-
-exports.produtoInteirosUsandoSomas = produtoInteirosUsandoSomas;

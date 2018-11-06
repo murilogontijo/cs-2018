@@ -22,7 +22,7 @@ const primo = require("../Algoritmo14");
 const mdc = require("../Algoritmo16");
 const mdc2 = require("../Algoritmo17");
 const fibonacci = require("../Algoritmo18");
-const fibonacci = require("../Algoritmo19");
+// const fibonacci2 = require("../Algoritmo19");
 
 QUnit.test("Algoritmo1 - Verifica a propriedade do numero 3025", function(
   assert
@@ -273,13 +273,13 @@ QUnit.test("Algoritmo17 - O valor do MDC2", function(assert) {
   );
 });
 
-QUnit.test("Algoritmo19 - O valor de fibonacci", function(assert) {
+QUnit.test("Algoritmo18 - O valor de fibonacci", function(assert) {
   let resultado = fibonacci.fibonacci(10);
 
   assert.equal(resultado, 55, "Teste correto - O valor eh igual a 55");
 });
 
-QUnit.test("Algoritmo19 - O valor de fibonacci", function(assert) {
+QUnit.test("Algoritmo18 - O valor de fibonacci", function(assert) {
   let resultado = fibonacci.fibonacci(-1);
 
   assert.equal(

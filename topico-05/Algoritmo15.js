@@ -5,7 +5,7 @@ exports.CrivoEratostenes = CrivoEratostenes;
  * @param {int} entrada - 1 numero
  * @returns {int} - Retorna o Crivo Erastostenes
  */
-function CrivoEratostenes(n) {
+function CrivoEratostenes(a, n) {
   if (n > 1) {
     i = 2;
     limite = Math.sqrt(n);

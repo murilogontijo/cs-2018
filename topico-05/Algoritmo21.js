@@ -1,15 +1,17 @@
 exports.cpf2 = cpf2;
-
+/**
+ * Recebe um numero que será calculado.
+ * @author Murilo Gontijo
+ * @param {int} entrada - 1 CPF
+ * @returns {int} - Retorna o se e valido ou nao
+ */
 function cpf2(d) {
   if (d.length === 11) {
     c = 8;
-    p = d[9];
-    s = d[9];
+    p = d[8];
+    s = d[8];
     i = 0;
-    while (i <= d.length) {
-      console.log(" index " + i + " numero " + d[i]);
-      i = i + 1;
-    }
+
     while (1 <= c) {
       p = p + d[c];
       s = s + p;
@@ -17,7 +19,9 @@ function cpf2(d) {
     }
     j = (s % 11) % 10;
     k = ((s - p + 9 * d[10]) % 11) % 10;
-    return (j = d[10]) + " e " + (k = d[11]);
+    console.log(j);
+    console.log(k);
+    return (j = d[9]) + " e " + (k = d[10]);
   } else return "Numeros não correspondem";
 }
 
