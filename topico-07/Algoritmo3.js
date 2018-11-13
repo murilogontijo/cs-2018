@@ -1,8 +1,13 @@
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
 /**
- * Recebe um numero que será calculado.
+ * Exebi o dia da semana a partir de uma data
  * @author Murilo Gontijo
- * @param {int} entrada - 3 numeros ( dia, mes e ano)
- * @returns {int} - Retorna o dia da Semana
+ * @param {number}3 numeros ( dia, mes e ano)
+ * @returns {number} - Retorna o dia da Semana
  */
 function diaDaSemana(dia, mes, ano) {
   if (dia >= 1 && dia <= 31 && mes >= 1 && mes <= 12 && ano > 1753) {
@@ -18,6 +23,11 @@ function diaDaSemana(dia, mes, ano) {
     return parseInt(diaSemana % 7);
   }
 }
+
+function pergunta() {
+  rl.question("Forneça o dia (dd): ", processaEntrada);
+}
+
 console.log(diaDaSemana(22, 10, 2018));
 
 exports.diaDaSemana = diaDaSemana;

@@ -1,7 +1,7 @@
 /**
- * Recebe um numero que será calculado.
+ * Realiza a validação de um numero qualquer se ele possui a Propriedade 3025
  * @author Murilo Gontijo
- * @param {int} entrada - numero
+ * @param {number} numero
  * @returns {boolean} - Retorna se é verdadeiro ou false
  */
 function calculaPropriedade3025(numero) {
