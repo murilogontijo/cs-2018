@@ -1,22 +1,22 @@
 exports.primo = primo;
 
 /**
- * Recebe um numero que será calculado.
+ * Verifica se o numero eh primo
  * @author Murilo Gontijo
- * @param {int} entrada - 1 numero
- * @returns {int} - Retorna verdadeiro ou false se o numero eh primo
+ * @param {int} numero - 1 numero
+ * @returns {boolean} - Retorna verdadeiro ou false se o numero eh primo
  */
-function primo(n) {
-  if (n > 1) {
+function primo(numero) {
+  if (numero > 1) {
     i = 2;
-    while (i < n) {
-      if (n % i === 0) {
+    while (i < numero) {
+      if (numero % i === 0) {
         return false;
       }
       i = i + 1;
       return true;
     }
-  } else return "Numeros não correspondem";
+  } else {
+    throw "Algum numero foi informado incorretamente. Voce deve obedecer a regra: numero > 1";
+  }
 }
-
-console.log(primo(4));

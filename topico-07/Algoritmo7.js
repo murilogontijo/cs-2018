@@ -2,7 +2,7 @@ var scanf = require("scanf");
 exports.produtoInteirosUsandoSomas = produtoInteirosUsandoSomas;
 
 /**
- * Recebe um numero que será calculado.
+ * Calcula o produto entre dois numeros inteiros
  * @author Murilo Gontijo
  * @param {int} entrada - 2 numeros
  * @returns {int} - Retorna o produto do numeros inteiros
@@ -27,5 +27,8 @@ function produtoInteirosUsandoSomas(num1, num2) {
       i = i + 1;
     }
     return soma;
+  } else {
+    throw "Algum numero foi informado incorretamente. Voce deve obedecer a regra: num1 >= 0 && num2 >= 0";
   }
 }
+console.log(produtoInteirosUsandoSomas());

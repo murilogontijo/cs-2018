@@ -1,11 +1,12 @@
 /**
- * Recebe um numero que será calculado.
+ * Calcula o valor da razao aurea
  * @author Murilo Gontijo
- * @param {int} entrada - 3 numeros
+ * @param {int} entrada - 2 numeros
  * @returns {double} - Retorna a razao Aurea
  */
-function razaoAurea(x, y, k) {
-  if (0 <= x && x < y && 0 < k && k === x + y) {
+function razaoAurea(x, y) {
+  k = x + y;
+  if (0 <= x && x < y && 0 < k) {
     c = y;
     a = x;
     i = 1;
@@ -16,9 +17,11 @@ function razaoAurea(x, y, k) {
       i = i + 1;
     }
     return c / a;
-  } else return "Numeros não correspondem";
+  } else {
+    throw "Algum numero foi informado incorretamente. Voce deve obedecer a regra: 0 <= x && x < y && 0 < k";
+  }
 }
 
-console.log(razaoAurea(1, 2, 3));
+console.log(razaoAurea(10, 20));
 
 exports.razaoAurea = razaoAurea;

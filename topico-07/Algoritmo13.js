@@ -1,17 +1,19 @@
 /**
- * Recebe um numero que será calculado.
+ * Calcula a raiz quadrada de um numero
  * @author Murilo Gontijo
- * @param {int} entrada - 2 numeros
+ * @param {int} base precisao - 2 numeros
  * @returns {int} - Retorna a raiz quadrada
  */
-function raiz(n, i) {
-  if (0 < n) {
-    r = 1;
-    while (0 <= i) {
-      r = (r + n / r) / 2;
-      i = i - 1;
+function raiz(base, precisao) {
+  if (0 < base) {
+    potencia = 1;
+    while (0 <= precisao) {
+      potencia = (potencia + base / potencia) / 2;
+      precisao = precisao - 1;
     }
-    return r;
-  } else return "Numeros não correspondem";
+    return potencia;
+  } else {
+    throw "Algum numero foi informado incorretamente. Voce deve obedecer a regra: 0 < base";
+  }
 }
 exports.raiz = raiz;

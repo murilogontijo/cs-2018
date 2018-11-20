@@ -1,22 +1,23 @@
 exports.mdc2 = mdc2;
 
 /**
- * Recebe um numero que será calculado.
+ * Calcula o MDC entre dois numeros
  * @author Murilo Gontijo
  * @param {int} entrada - 2 numeros
  * @returns {int} - Retorna o mdc
  */
-function mdc2(a, b) {
-  if ((b <= a, 0 < b)) {
-    while (a != b) {
-      if (a > b) {
-        a = a - b;
+function mdc2(numero1, numero2) {
+  if (numero2 <= numero1 && 0 < numero2) {
+    while (numero1 != numero2) {
+      if (numero1 > numero2) {
+        numero1 = numero1 - numero2;
       } else {
-        b = b - a;
+        numero2 = numero2 - numero1;
       }
     }
-    return a;
-  } else return "Numeros não correspondem";
+    mdc = numero1;
+    return mdc;
+  } else {
+    throw "Algum numero foi informado incorretamente. Voce deve obedecer a regra: numero2 <= numero1 && 0 < numero2";
+  }
 }
-
-console.log(mdc2(81, 54));

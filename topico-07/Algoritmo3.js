@@ -1,8 +1,3 @@
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
-
 /**
  * Exebi o dia da semana a partir de uma data
  * @author Murilo Gontijo
@@ -21,13 +16,9 @@ function diaDaSemana(dia, mes, ano) {
       (3 * (mes + 1)) / 5 +
       (ano + ano / 4 - ano / 100 + ano / 400);
     return parseInt(diaSemana % 7);
+  } else {
+    throw "Algum numero foi informado incorretamente. Voce deve obedecer a regra: dia >= 1 && dia <= 31 && mes >= 1 && mes <= 12 && ano > 1753";
   }
 }
-
-function pergunta() {
-  rl.question("Forneça o dia (dd): ", processaEntrada);
-}
-
-console.log(diaDaSemana(22, 10, 2018));
 
 exports.diaDaSemana = diaDaSemana;

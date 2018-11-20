@@ -1,6 +1,6 @@
 var scanf = require("scanf");
 /**
- * Recebe um numero que será calculado.
+ * Calcula o fatorial de um numero natural inteiro.
  * @author Murilo Gontijo
  * @param {int} entrada - 1 numero
  * @returns {int} - Retorna o valor do fatorial
@@ -16,6 +16,8 @@ function fatorial(numero) {
       i = i + 1;
     }
     return f;
+  } else {
+    throw "Algum numero foi informado incorretamente. Voce deve obedecer a regra: numero >= 1";
   }
 }
 

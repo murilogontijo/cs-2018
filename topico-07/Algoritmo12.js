@@ -1,21 +1,24 @@
 exports.quadradoPerfeito = quadradoPerfeito;
 
 /**
- * Recebe um numero que será calculado.
+ * Verifica se o numero eh um quadrado perfeito
  * @author Murilo Gontijo
- * @param {int} entrada - 1 numero
- * @returns {double} - Retorna o quadrado Perfeito
+ * @param {int} numero - 1 numero
+ * @returns {boolean} - Retorna true/false se numero é um quadrado Perfeito
  */
-function quadradoPerfeito(n) {
-  if (1 <= n) {
+function quadradoPerfeito(numero) {
+  if (1 <= numero) {
     i = 1;
-    s = 1;
-    while (s < n) {
+    soma = 1;
+    while (soma < numero) {
       i = i + 2;
-      s = s + 1;
+      soma = soma + i;
     }
-    return (s = n);
-  } else return "Numeros não correspondem";
+    if (soma === numero) return true;
+    else return false;
+  } else {
+    throw "Algum numero foi informado incorretamente. Voce deve obedecer a regra: 1 <= numero";
+  }
 }
 
-console.log(quadradoPerfeito(0));
+console.log(quadradoPerfeito(196));

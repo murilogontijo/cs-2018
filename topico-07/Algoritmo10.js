@@ -1,26 +1,26 @@
 /**
- * Recebe um numero que será calculado.
+ * Calcula o logaritmo natural de um numero
  * @author Murilo Gontijo
  * @param {int} entrada - 2 numeros
  * @returns {double} - Retorna o logaritmo
  */
-function logaritmoNatural(n, k) {
-  if (1 <= n && 2 <= k) {
+function logaritmoNatural(base, expoente) {
+  if (1 <= base && 2 <= expoente) {
     i = 2;
-    e = 1 + n;
-    numerador = n;
+    logaritmo = 1 + base;
+    numerador = base;
     denominador = 1;
 
-    while (i <= k) {
+    while (i <= expoente) {
       numerador = numerador * numerador;
       denominador = denominador * i;
-      e = e + numerador / denominador;
+      logaritmo = logaritmo + numerador / denominador;
       i = i + 1;
     }
-    return e;
-  } else return "Numeros não correspondem";
+    return logaritmo;
+  } else {
+    throw "Algum numero foi informado incorretamente. Voce deve obedecer a regra: 1 <= base && 2 <= expoente";
+  }
 }
-
-console.log(logaritmoNatural(3, 2));
 
 exports.logaritmoNatural = logaritmoNatural;
