@@ -65,6 +65,7 @@ function toggleOverwriteHour(e) {
 }
 
 function overwriteHour(e) {
+    clearInterval(x);
     if (document.getElementById('hourOverwited').value) {
         let newHour = new Date().setHours(document.getElementById('hourOverwited').value.split(':')[0]);
         newHour = new Date(newHour).setMinutes(document.getElementById('hourOverwited').value.split(':')[1]);
@@ -74,6 +75,26 @@ function overwriteHour(e) {
         chrome.storage.sync.set({'newHour': newHour}, () => {
             console.log('Notificação da hora de saída sobrescrita para ' + document.getElementById('hourOverwited').value);
         });
+
+        var x = setInterval(function() {
+        let now = new Date().getTime();
+
+         let distance = newHour - now;
+    
+         let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+         let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+         let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+         chrome.storage.sync.set({'newHour': newHour}, () => {
+            console.log(document.getElementById("countDownTimer").innerHTML = hours + ":" + minutes + ":" + seconds);
+        });
+         if (distance < 0) {
+             clearInterval(x);
+                chrome.storage.sync.set({'newHour': newHour}, () => {
+                console.log(document.getElementById("countDownTimer").innerHTML = "Terminou");
+            });
+         }}, 1000);
+        
     } else {
         removeNewHour();
     }
@@ -87,7 +108,7 @@ function removeNewHour() {
 
 function checkNextAlarm() {
     let nextAlarm = null;
-    let nextNotificationString = '-';
+    let nextNotificationString = '-';  
 
     chrome.alarms.getAll((alarms) => {
         alarms.forEach(alarm => {
@@ -102,6 +123,7 @@ function checkNextAlarm() {
             nextNotificationString = (nextAlarmDate.getHours() < 10 ? '0' : '') + nextAlarmDate.getHours() + ':' + (nextAlarmDate.getMinutes() < 10 ? '0' : '') + nextAlarmDate.getMinutes();
         }
         document.getElementById('nextNotification').innerHTML = nextNotificationString;
+        
 
         chrome.storage.sync.remove('checkAlarms');
     });

@@ -3,15 +3,6 @@
     <link href="/estilo.css" rel="stylesheet"/>
 </head>
 <body id="body" >
-        
-    <div class="row press" onload="startTime()">
-            <span id='realTime' ></span>
-    </div>
-
-    <div class="row press">
-        <span>Próxima notificação: </span>
-        <b id="nextNotification"></b>
-    </div>
 
     <div class="row press">
             <label for="overwriteHour">Ativar contagem regressiva</label>
@@ -30,10 +21,24 @@
         <label for="audioPermission">Áudio</label>
         <input type="checkbox" name="audioPermission" id="audioPermission" class="cbx hidden" />
         <label for="audioPermission" class="lbl"></label> 
+    </div>    
+        
+    <div class="row press">
+        <span>Próxima notificação: </span>
+        <b id="nextNotification"></b>
     </div>
     
+    <div class="row press">
+        <span>Contagem regressiva: </span>
+        <b id="countDownTimer"></b>
+    </div>
+    
+    <div class="btn-group aling-rigth">
+            <button onclick="document.getElementById('removeNewHour').value = ''">Limpar</button>      
+    </div>
 
     <small class="rodape" id="rodape"></small>
+    <div class="clock-builder-output"></div>
 
     <script src="popup.js"></script>
     <script src="date_time.js"></script>
