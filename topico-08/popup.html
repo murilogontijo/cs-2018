@@ -1,0 +1,40 @@
+<head>
+    <meta charset="UTF-8">
+    <link href="/estilo.css" rel="stylesheet"/>
+</head>
+<body id="body" >
+        
+    <div class="row press" onload="startTime()">
+            <span id='realTime' ></span>
+    </div>
+
+    <div class="row press">
+        <span>Próxima notificação: </span>
+        <b id="nextNotification"></b>
+    </div>
+
+    <div class="row press">
+            <label for="overwriteHour">Ativar contagem regressiva</label>
+            <input type="checkbox" name="overwriteHour" id="overwriteHour" class="cbx hidden" />
+            <label for="overwriteHour" class="lbl"></label> 
+        </div>
+    
+        Me notifique as: <input type="time" id="hourOverwited" name="hourOverwited" disabled />    
+    
+    <div class="row press mt15">
+        <label for="fiveMinutesPermission">Aviso de 5 minutos</label>
+        <input type="checkbox" name="fiveMinutesPermission" id="fiveMinutesPermission" class="cbx hidden" />
+        <label for="fiveMinutesPermission" class="lbl"></label> 
+    </div>
+    <div class="row press">
+        <label for="audioPermission">Áudio</label>
+        <input type="checkbox" name="audioPermission" id="audioPermission" class="cbx hidden" />
+        <label for="audioPermission" class="lbl"></label> 
+    </div>
+    
+
+    <small class="rodape" id="rodape"></small>
+
+    <script src="popup.js"></script>
+    <script src="date_time.js"></script>
+</body>

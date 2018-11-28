@@ -1,8 +1,10 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/16793ea2a08e4520899287cb2cc99454)](https://www.codacy.com/app/murilogontijo/cs-2018?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=murilogontijo/cs-2018&amp;utm_campaign=Badge_Grade)
 
+##### SonarCloud: https://sonarcloud.io/dashboard?id=murilogontijo_cs-2018
+
 
 # Trabalho de Construção de Software
-
+https://www.inf.ufg.br/~fabio/cs
 
 ## Ementa
 Fundamentos de construção de software (minimizar complexidade, antecipar mudanças, construção para a verificação e padrões em construção de software). Gerência de construção (modelos de processos de construção, planejamento de construção, medidas de construção). Projeto detalhado e construção de software. Linguagens empregadas na construção de software. Codificação. Testes de unidade e de integração. Reutilização de software. Qualidade de código. Integração.

@@ -1,0 +1,45 @@
+{
+  "manifest_version": 2,
+
+  "name": "Timer",
+  "description": "Essa extensão notifica o usuário a partir do horario configurado.",
+  "version": "1.0.0",
+
+  "icons": {
+    "128": "/assets/icone-plugin.png"
+  },
+
+  "web_accessible_resources": [
+    "/assets/audio-ponto.mp3", 
+    "/assets/five-minutes-remaining.mp3", 
+    "/assets/relogio-notification.png"
+  ],
+
+  "browser_action": {
+    "default_icon": "/assets/icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.google.com.br/"
+      ],
+      "js": [
+        "notification-timebox.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+
+  "background": {
+    "scripts": ["eventPage.js"],
+    "persistent": false
+  },
+
+  "permissions": [
+    "storage",
+    "notifications",
+    "alarms"
+  ]
+}
