@@ -19,6 +19,16 @@ chrome.alarms.get('alarmReset', (response) => {
 chrome.alarms.onAlarm.addListener((response) => {
     let alertObj = {};
     switch (response.name) {
+        case 'alarmAlmoco':
+            alertObj = {titulo: "Hora de bater o ponto!" + (devMode ? " [Dev]" : ""), corpo: { 
+                    body: 'Já pode voltar a trabalhar',
+                    tag: 'almoco' + (devMode ? "-dev" : ""),
+                    icon: icone
+                }
+            };
+            mostraNotificacao(alertObj);
+            break;
+
         case 'alarmSaida':
             alertObj = {titulo: "Hora de bater o ponto!" + (devMode ? " [Dev]" : ""), corpo: { 
                     body: 'Lembre-se de ir embora.',
@@ -121,6 +131,17 @@ chrome.storage.onChanged.addListener(function(changes) {
                         }
                     });
                 }
+                
+                break;
+
+            case 'horaAlmoco':
+                let almoco = storageChange.newValue;
+                chrome.alarms.clear('alarmAlmoco', () => {
+                    chrome.alarms.create('alarmAlmoco', {
+                        when: almoco
+                    });
+                    chrome.storage.sync.set({'checkAlarms' : true});
+                });
                 break;
         }
     }
